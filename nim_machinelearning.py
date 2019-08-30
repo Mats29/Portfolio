@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import random
 
 def initialize():
@@ -106,6 +105,9 @@ def playgame(strategy):
     '''
     YN = input("Would you like to play a game? (Y/N) ")
     while YN=="Y" or YN=="y":
+        instructions = input("Do you know how to play? (Y/N) ")
+        if instructions == "N" or instructions == "n":
+            print("Here's how to play; there are three piles containing 7, 5, and 3 objects. Each turn a player removes as many objects as they like from any one pile. The player to take the last object from the last pile wins. To play first indicate the pile number and then how many objects you would like to remove. Ex: 1 3 would remove 3 objects from the first pile.")
         P1 = input('Player 1: Computer (C) or Human (H)? (C/H)')
         while P1 not in 'Cc' and P1 not in 'Hh':
             print('invalid input')
